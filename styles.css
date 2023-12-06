@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #000000, #222222); /* Even darker gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#grid td {
+    border: 1px solid #ddd;
+    padding: 0.8vw;
+    max-width: 10vw;
+    overflow: hidden;
+    border-radius: 15px; /* Add border radius */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Add box shadow */
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 15px);
+    }
+    100% {
+        transform: translate(-10px, -15px);
+    }
+}
+
+.link-box {
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: float 5s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.8); /* Add background color */
+    border-radius: 15px; /* Add border radius */
+}
+
+.link-box a {
+    text-decoration: none;
+    color: #333; /* Change text color */
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#description {
+    text-align: center;
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    #grid {
+        width: 100%;
+    }
+    #grid td {
+        padding: 0.5em;
+        font-size: 4vw;
+    }
+    .link-box {
+        padding: 0.5em;
+    }
+    #title {
+        font-size: 5vw;
+    }
+    #description {
+        font-size: 4vw;
+    }
+}
